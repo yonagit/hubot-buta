@@ -28,7 +28,7 @@ module.exports = (robot) ->
     key = "talking_user_#{res.envelope.user.id}"
     client.get key, (err, reply) ->
       if err || !reply
-        res.send "err=#{err}, reply=#{reply}"
+        # res.send "err=#{err}, reply=#{reply}"
         return
       data = [
         'apikey=DZZfJJCIaKv3HgyTvoWahePMfUTqhF3a',
