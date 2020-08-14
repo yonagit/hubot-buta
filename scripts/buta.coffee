@@ -36,6 +36,7 @@ module.exports = (robot) ->
       ].join('&')
       robot.http("https://api.a3rt.recruit-tech.co.jp/talk/v1/smalltalk")
         .post(data) (err, response, body) ->
+          # res.send "err=#{err}, response=#{response}, body=#{body}"
           json = JSON.parse body
           if err || json.status != 0
             # res.send "err=#{err}, status=#{json.status}"
